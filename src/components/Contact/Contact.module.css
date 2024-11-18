@@ -1,0 +1,105 @@
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contactWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.contactInfo {
+  box-sizing: border-box;
+  width: 45%;
+  padding: 2rem 2rem 0 2rem;
+  background-color: var(--base-red);
+  color: white;
+}
+
+.singleContactData {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactIconsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contactFormWrapper {
+  box-sizing: border-box;
+  width: 55%;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.contactForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.formTitle {
+  margin-bottom: 0;
+}
+
+.underlineRed {
+  width: 100px;
+  height: 3px;
+  background-color: #e73434;
+  border-radius: 5px;
+  margin: 3px 0;
+  border: none;
+}
+
+.formInput {
+  background-color: var(--grey);
+  padding: 0.8rem 1rem;
+  border: none;
+}
+
+.formInput:focus {
+  outline: none;
+  border: 2px solid #c7c7c7;
+  border-radius: 5px;
+}
+
+.submitButtonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitButton {
+  background-color: var(--base-red);
+  padding: 0.6rem 3rem;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+@media (max-width: 769px) {
+  .contactWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactInfo {
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  .contactFormWrapper {
+    width: 100%;
+  }
+
+  .submitButton {
+    width: 40%;
+  }
+}

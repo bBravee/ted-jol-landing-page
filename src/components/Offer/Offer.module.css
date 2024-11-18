@@ -1,0 +1,83 @@
+.offerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--light-red);
+}
+
+.offerRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.offerCard {
+  min-height: 450px;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+}
+
+.offerCard:has(:hover, :focus) {
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+}
+
+.offerCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.cardBody {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--base-red);
+  padding: 0 1.5rem 1rem;
+  color: rgb(238, 238, 238);
+}
+
+.cardBodyTitle {
+  font-size: 24px;
+}
+
+.cardBodyParagraph {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.readMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.arrowIcon {
+  position: absolute;
+  right: 29%;
+  min-width: 34px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
