@@ -84,6 +84,12 @@
   border-radius: 3px;
 }
 
+.iframeMap {
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+}
+
 @media (max-width: 769px) {
   .contactWrapper {
     flex-direction: column;

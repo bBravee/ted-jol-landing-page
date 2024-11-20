@@ -2,11 +2,11 @@ import LayoutComponent from "@/layout/layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Kanit } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const kanit = Kanit({
-  subsets: ["latin"], // Możesz dodać inne podzbiory, jeśli są potrzebne
-  weight: ["400", "700"], // Określenie wag czcionki, np. regular (400) i bold (700)
+const kanit = Montserrat({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {

@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { gql, GraphQLClient } from "graphql-request";
 import { OfferData } from "@/types/Offer.type";
@@ -6,7 +6,7 @@ import About from "../components/Home/About";
 import Offer from "@/components/Offer/Offer";
 import Contact from "@/components/Contact/Contact";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 // export async function getStaticProps() {
 //   const graphConnect = new GraphQLClient(process.env.ENDPOINT as string);
