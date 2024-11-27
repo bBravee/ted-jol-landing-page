@@ -5,6 +5,7 @@ import { OfferData } from "@/types/Offer.type";
 import About from "../components/Home/About";
 import Offer from "@/components/Offer/Offer";
 import Contact from "@/components/Contact/Contact";
+import TitlePanel from "@/layout/TitlePanel";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ const inter = Montserrat({ subsets: ["latin"] });
 export default function Home(data: { offers: OfferData[] }) {
   return (
     <>
+      <TitlePanel />
       <About />
       <Offer />
       <Contact />

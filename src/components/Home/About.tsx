@@ -13,10 +13,9 @@ export default function About() {
       <div className={styles.imageWrapper}>
         <Image
           className={styles.aboutImage}
-          width={400}
-          height={300}
-          src="/assets/images/ładowarka.png"
+          src="/assets/images/formula-1-2701335_1920.jpg"
           alt="ładowarka kołowa"
+          fill
         />
       </div>
     </div>

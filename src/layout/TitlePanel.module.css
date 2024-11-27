@@ -1,0 +1,25 @@
+.titlePanelWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 100vw;
+  background: black;
+  overflow: hidden;
+  background: #c33764;
+  background: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(231, 52, 52, 0.5)
+    ),
+    url("../../public/assets/images/truck-2707700.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(231, 52, 52, 0.5)),
+    url("../../public/assets/images/truck-2707700.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.titlePanelTex {
+  color: white;
+  font-size: 80px;
+}
