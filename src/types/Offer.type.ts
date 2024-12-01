@@ -2,10 +2,11 @@ export type OfferData = {
   id: string;
   category: string;
   productName: string;
-  mileageOrMth: number;
+  mileage: number;
+  yearOfProduction: number;
   price: number;
   details: string[];
-  productImg: ProductImg;
+  images: { url: string }[];
 };
 
 type ProductImg = {

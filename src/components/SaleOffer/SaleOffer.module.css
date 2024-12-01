@@ -1,0 +1,81 @@
+.offersList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+.offerItem {
+  width: 70%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+}
+
+.offerImgWrapper {
+  position: relative;
+  width: 65%;
+  height: 100%;
+}
+
+.offerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 4 / 3;
+}
+
+.offerDetails {
+  position: relative;
+  width: 35%;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offerSubtitle {
+  color: var(--base-red);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.offerTitle {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.redDot {
+  color: red;
+  margin: 0 5px;
+  font-size: 2rem;
+}
+
+.offerAdditionalInfo {
+  font-size: 28px;
+}
+
+.offerPrice {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.offerItemButton {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5rem;
+  width: 100%;
+  color: white;
+  background-color: var(--base-red);
+  border: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

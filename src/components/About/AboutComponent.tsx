@@ -1,8 +1,8 @@
 import Title from "@/ui/Title/Title";
-import styles from "./About.module.css";
+import styles from "./AboutComponent.module.css";
 import Image from "next/image";
 
-export default function About() {
+export default function AboutComponent() {
   const aboutTitle = "O nas - czym się zajmujemy?";
   const subtitle = "Kim jesteśmy?";
   return (

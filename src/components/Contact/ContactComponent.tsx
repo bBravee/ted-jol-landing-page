@@ -1,9 +1,10 @@
 import Title from "@/ui/Title/Title";
-import styles from "./Contact.module.css";
+import styles from "./ContactComponent.module.css";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import TitlePanel from "@/layout/TitlePanel";
 
-export default function Contact() {
+export default function ContactComponent() {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [subject, setSubject] = useState<string>("");

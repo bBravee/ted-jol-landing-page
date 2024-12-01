@@ -2,49 +2,46 @@ import { Montserrat } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { gql, GraphQLClient } from "graphql-request";
 import { OfferData } from "@/types/Offer.type";
-import About from "../components/Home/About";
+import About from "../components/About/AboutComponent";
 import Offer from "@/components/Offer/Offer";
-import Contact from "@/components/Contact/Contact";
+import Contact from "@/components/Contact/ContactComponent";
 import TitlePanel from "@/layout/TitlePanel";
+import ContactComponent from "@/components/Contact/ContactComponent";
+import AboutComponent from "../components/About/AboutComponent";
+import SaleOffer from "@/components/SaleOffer/SaleOffer";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
-// export async function getStaticProps() {
-//   const graphConnect = new GraphQLClient(process.env.ENDPOINT as string);
-//   const response: { offers: OfferData[] } = await graphConnect.request(gql`
-//     query MyQuery {
-//       offers {
-//         category
-//         id
-//         mileage
-//         price
-//         productName
-//         test
-//       }
-//     }
-//   `);
-//   return { props: { offers: response.offers } };
-// }
+export async function getStaticProps() {
+  const graphConnect = new GraphQLClient(process.env.ENDPOINT as string);
+  const response: { offers: OfferData[] } = await graphConnect.request(gql`
+    query MyQuery {
+      offers {
+        category
+        id
+        mileage
+        price
+        productName
+        details
+        yearOfProduction
+        images {
+          url
+        }
+      }
+    }
+  `);
+  return { props: { offers: response.offers } };
+}
 
 export default function Home(data: { offers: OfferData[] }) {
+  console.log(data);
   return (
     <>
-      <TitlePanel />
-      <About />
+      <TitlePanel titleText="Home" />
+      <AboutComponent />
       <Offer />
-      <Contact />
-      {/* <main className={`${styles.main} ${inter.className}`}>
-        {data.offers.map((offer) => {
-          return (
-            <div key={offer.id}>
-              <h1>{offer.productName}</h1>
-              <h2>{offer.price}</h2>
-              <p>{offer.mileageOrMth}</p>
-              <p>{offer.price}</p>
-            </div>
-          );
-        })}
-      </main> */}
+      <SaleOffer offersData={data} />
+      <ContactComponent />
     </>
   );
 }

@@ -1,3 +1,11 @@
+import ContactComponent from "@/components/Contact/ContactComponent";
+import TitlePanel from "@/layout/TitlePanel";
+
 export default function Contact() {
-  return <h1>Contact section</h1>;
+  return (
+    <>
+      <TitlePanel titleText="Kontakt" />
+      <ContactComponent />
+    </>
+  );
 }

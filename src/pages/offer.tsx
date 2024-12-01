@@ -1,3 +1,9 @@
+import TitlePanel from "@/layout/TitlePanel";
+
 export default function Offer() {
-  return <h1>Offer</h1>;
+  return (
+    <>
+      <TitlePanel titleText="Oferta" />
+    </>
+  );
 }
