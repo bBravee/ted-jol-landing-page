@@ -1,25 +1,28 @@
 .offersList {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 5rem;
   margin-top: 5rem;
 }
 
 .offerItem {
-  width: 70%;
-  height: 500px;
+  position: relative;
+  width: 500px;
+  height: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.15);
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .offerImgWrapper {
   position: relative;
-  width: 65%;
-  height: 100%;
+  width: 100%;
+  min-height: 390px;
+  height: 60%;
 }
 
 .offerImage {
@@ -31,22 +34,25 @@
 }
 
 .offerDetails {
+  padding: 1.5rem;
+  margin-bottom: 60px;
   position: relative;
-  width: 35%;
-  padding-top: 1.5rem;
+  height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .offerSubtitle {
   color: var(--base-red);
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 .offerTitle {
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 500;
   margin: 0;
 }
@@ -58,19 +64,27 @@
 }
 
 .offerAdditionalInfo {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .offerPrice {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 500;
+  margin: 0;
+}
+
+.offerSubtitle,
+.offerTitle,
+.offerAdditionalInfo,
+.offerPrice {
+  text-align: center;
   margin: 0;
 }
 
 .offerItemButton {
   position: absolute;
   bottom: 0;
-  padding: 1.5rem;
+  height: 60px;
   width: 100%;
   color: white;
   background-color: var(--base-red);
@@ -78,4 +92,42 @@
   font-size: 20px;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .redDot {
+    font-size: 10px;
+  }
+
+  .offerImgWrapper {
+    min-height: 280px;
+    height: 65%;
+  }
+
+  .offerDetails {
+    padding: 0.8rem;
+    gap: 5px;
+    margin-bottom: 40px;
+  }
+
+  .offerSubtitle {
+    font-size: 12px;
+  }
+
+  .offerTitle {
+    font-size: 18px;
+  }
+
+  .offerAdditionalInfo {
+    font-size: 12px;
+  }
+
+  .offerPrice {
+    font-size: 20px;
+  }
+
+  .offerItemButton {
+    height: 40px;
+    font-size: 12px;
+  }
 }

@@ -35,8 +35,8 @@ export default function SaleOffer({
                 <span className={styles.redDot}> • </span> {offer.mileage} km
               </p>
               <p className={styles.offerPrice}>{offer.price} zł</p>
-              <button className={styles.offerItemButton}>Szczegóły</button>
             </div>
+            <button className={styles.offerItemButton}>Szczegóły</button>
           </div>
         ))}
       </div>
