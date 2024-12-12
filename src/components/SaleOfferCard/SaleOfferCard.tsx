@@ -1,13 +1,20 @@
-import { OfferData } from "@/types/Offer.type";
-import styles from "@/components/SaleOffer/SaleOffer.module.css";
+import { OfferData } from "@/API/types/Offer.type";
+import styles from "@/components/SaleOfferCard/SaleOfferCard.module.css";
 import Title from "@/ui/Title/Title";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function SaleOffer({
+export default function SaleOfferCard({
   offersData,
+  fullOffer,
 }: {
   offersData: { offers: OfferData[] };
+  fullOffer: boolean;
 }) {
+  const offersArray = fullOffer
+    ? offersData.offers
+    : offersData.offers.slice(0, 2);
+
   return (
     <div className="section-padding">
       <Title
@@ -17,7 +24,7 @@ export default function SaleOffer({
         descVisible={false}
       />
       <div className={styles.offersList}>
-        {offersData.offers.map((offer) => (
+        {offersArray.map((offer) => (
           <div className={styles.offerItem} key={offer.id}>
             <div className={styles.offerImgWrapper}>
               <Image
@@ -36,7 +43,10 @@ export default function SaleOffer({
               </p>
               <p className={styles.offerPrice}>{offer.price} zł</p>
             </div>
-            <button className={styles.offerItemButton}>Szczegóły</button>
+
+            <button className={styles.offerItemButton}>
+              <Link href={"/offers/" + offer.slug}>Szczegóły</Link>
+            </button>
           </div>
         ))}
       </div>

@@ -3,21 +3,20 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  background-color: var(--light-red);
 }
 
 .offerRow {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1200px;
   flex-wrap: wrap;
-  gap: 5rem;
 }
 
 .offerCard {
+  position: relative;
   min-height: 450px;
-  min-width: 300px;
-  max-width: 500px;
-  border-radius: 50px;
+  width: 45%;
+  border-radius: 5px;
   box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -31,25 +30,35 @@
   --link-icon-opacity: 1;
 }
 
+.cardCircle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  background-color: var(--light-red);
+}
+
 .offerCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .cardHeader {
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
   background-color: #f5f5f5;
 }
 
 .cardBody {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--base-red);
-  padding: 0 1.5rem 1rem;
-  color: rgb(238, 238, 238);
+  background-color: #f5f5f5;
+  padding: 1rem;
+  color: var(--base-red);
 }
 
 .cardBodyTitle {
@@ -66,18 +75,106 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 100%;
+  transform: translateX(12px);
+  color: var(--base-red);
+  gap: 0.6rem;
 }
 
 .arrowIcon {
-  position: absolute;
-  right: 29%;
-  min-width: 34px;
   width: 24px;
   height: 24px;
-  margin-left: 5px;
+  background-color: var(--base-red);
+  border-radius: 50%;
+  padding: 2px;
   transform: translateX(var(--link-icon-translate));
   opacity: var(--link-icon-opacity);
   transition: all 0.3s;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .offerRow {
+    gap: 1.5rem;
+  }
+
+  .cardBodyTitle {
+    font-size: 22px;
+  }
+
+  .cardBodyParagraph {
+    font-size: 15px;
+  }
+
+  .arrowIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .readMore {
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .offerRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offerCard {
+    width: 80%;
+  }
+
+  .cardCircle {
+    width: 300px;
+    height: 300px;
+    top: -25%;
+  }
+
+  .cardBodyTitle {
+    font-size: 20px;
+  }
+
+  .cardBodyParagraph {
+    font-size: 14px;
+  }
+
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .readMore {
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .offerCard {
+    width: 100%;
+  }
+
+  .cardCircle {
+    width: 265px;
+    height: 265px;
+    top: -20%;
+  }
+
+  .cardBodyTitle {
+    font-size: 18px;
+  }
+
+  .cardBodyParagraph {
+    font-size: 13px;
+  }
+
+  .arrowIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .readMore {
+    gap: 0.3rem;
+  }
 }

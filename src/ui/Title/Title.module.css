@@ -34,3 +34,9 @@
   margin-bottom: 2rem;
   font-size: 22px;
 }
+
+@media (max-width: 768px) {
+  .titleWrapper {
+    align-items: flex-start !important;
+  }
+}

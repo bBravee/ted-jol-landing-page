@@ -16,11 +16,12 @@ export default function About() {
       />
       <div className={styles.offerRow}>
         <div className={styles.offerCard}>
+          <div className={styles.cardCircle}></div>
           <div className={styles.cardHeader}>
             <Image
               className={styles.aboutImage}
-              width={250}
-              height={200}
+              width={200}
+              height={150}
               src="/assets/icons/excavator.svg"
               alt="ładowarka kołowa"
             />
@@ -50,11 +51,12 @@ export default function About() {
           </div>
         </div>
         <div className={styles.offerCard}>
+          <div className={styles.cardCircle}></div>
           <div className={styles.cardHeader}>
             <Image
               className={styles.aboutImage}
-              width={250}
-              height={200}
+              width={200}
+              height={150}
               src="/assets/icons/truck.svg"
               alt="ładowarka kołowa"
             />
