@@ -1,6 +1,7 @@
 import { allOffers } from "@/API/graphql/allOffers";
 import { singleOffer } from "@/API/graphql/singleOffer";
 import { OfferData } from "@/API/types/Offer.type";
+import SaleOfferDetails from "@/components/Offer/SaleOfferDetails/SaleOfferDetails";
 import { GraphQLClient } from "graphql-request";
 
 export async function getStaticProps(context: any) {
@@ -44,7 +45,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function SaleOfferDetails(data: { offer: OfferData }) {
+export default function SaleOfferSlug(data: { offer: OfferData }) {
   console.log(data);
-  return <h2>Offer Details</h2>;
+  return <SaleOfferDetails />;
 }

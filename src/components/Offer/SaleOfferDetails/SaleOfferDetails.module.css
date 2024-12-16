@@ -1,0 +1,130 @@
+.truckCard {
+  max-width: 900px;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.mainImgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mainImage {
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: filter 0.3s ease;
+}
+
+.thumbnails {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  gap: 0.5rem;
+  margin: 10px 0;
+}
+
+.thumbnail {
+  height: 130px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: filter 0.3s ease;
+}
+
+.truckInfo {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.offerName {
+  font-size: 36px;
+}
+
+.offerBasicInfo {
+  font-size: 22px;
+}
+
+.offerPrice {
+  font-size: 36px;
+}
+
+.highlight {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.infoItem {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  color: white;
+  font-weight: 300;
+  margin: 0;
+  background-color: var(--base-red);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actionButton {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.mainImage:hover,
+.thumbnail:hover {
+  filter: brightness(70%);
+}
+
+@media (max-width: 930px) {
+  .truckCard {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  .truckCard {
+    width: 500px;
+  }
+  .thumbnail {
+    height: 100px;
+  }
+}
+
+@media (max-width: 520px) {
+  .truckCard {
+    width: 350px;
+  }
+
+  .mainImgWrapper {
+    height: 450px;
+  }
+
+  .thumbnails {
+    display: none;
+  }
+}
