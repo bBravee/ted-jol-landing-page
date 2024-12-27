@@ -22,15 +22,17 @@ export default function Navbar() {
           onClick={handleHamburgerToggle}
           href="/"
           className={`${styles.navBarLogo}`}
+          aria-label="Strona główna"
         >
           LOGO
         </Link>
-        <ul ref={navBarRef} className={styles.navBarLinks}>
+        <ul ref={navBarRef} className={styles.navBarLinks} role="navigation">
           <li className={styles.listItem}>
             <Link
               onClick={handleHamburgerToggle}
               href="/"
               className={`${styles.navBarLink}`}
+              aria-label="Przejdź do strony głównej"
             >
               STRONA GŁÓWNA
             </Link>
@@ -40,6 +42,7 @@ export default function Navbar() {
               onClick={handleHamburgerToggle}
               href="/about"
               className={`${styles.navBarLink}`}
+              aria-label="Przejdź do sekcji o nas"
             >
               O NAS
             </Link>
@@ -49,6 +52,7 @@ export default function Navbar() {
               onClick={handleHamburgerToggle}
               href="/offer"
               className={`${styles.navBarLink}`}
+              aria-label="Przejdź do oferty"
             >
               OFERTA
             </Link>
@@ -58,6 +62,7 @@ export default function Navbar() {
               onClick={handleHamburgerToggle}
               href="/contact"
               className={`${styles.navBarLink}`}
+              aria-label="Przejdź do sekcji kontaktowej"
             >
               KONTAKT
             </Link>
@@ -67,6 +72,9 @@ export default function Navbar() {
           ref={hamburgerRef}
           className={styles.hamburgerButton}
           onClick={handleHamburgerToggle}
+          aria-label={isOpen ? "Zamknij menu" : "Otwórz menu"}
+          aria-expanded={isOpen ? "true" : "false"}
+          aria-controls="navbar-menu"
         >
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>

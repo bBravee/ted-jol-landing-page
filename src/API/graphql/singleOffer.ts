@@ -11,6 +11,9 @@ export const singleOffer = gql`
       slug
       details
       yearOfProduction
+      description {
+        html
+      }
       images {
         url
       }

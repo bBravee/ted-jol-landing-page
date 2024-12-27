@@ -7,7 +7,7 @@ export default function AboutAdvantages() {
     <>
       <div className={styles.advantagesWrapper}>
         <Title
-          title="Co nas wyróżnia"
+          title="Dlaczego warto nam zaufać?"
           subtitle="Nasze wartości"
           isCentered={true}
           descVisible={false}
@@ -18,12 +18,13 @@ export default function AboutAdvantages() {
               width={60}
               height={60}
               src="/assets/icons/thunderbolt.svg"
-              alt="Błyskawica"
+              alt="Ikona szybkiej realizacji zamówień dla maszyn budowlanych"
             />
             <h3>Szybka realizacja</h3>
             <p className={styles.advantagesItemParagraph}>
-              Zapewniamy szybkie i efektywne realizacje, aby maksymalnie skrócić
-              czas obsługi naszych klientów.
+              Zapewniamy błyskawiczne i efektywne realizacje zamówień na maszyny
+              budowlane i samochody ciężarowe, aby maksymalnie skrócić czas
+              obsługi naszych klientów.
             </p>
           </div>
           <div className={styles.advantagesItem}>
@@ -31,13 +32,13 @@ export default function AboutAdvantages() {
               width={60}
               height={60}
               src="/assets/icons/puzzle.svg"
-              alt="Puzzle"
+              alt="Ikona elastycznych rozwiązań dopasowanych do potrzeb klienta"
             />
             <h3>Elastyczność</h3>
             <p className={styles.advantagesItemParagraph}>
-              {" "}
-              Oferujemy dopasowane rozwiązania, dostosowane do unikalnych
-              potrzeb każdego klienta, aby spełnić jego oczekiwania.
+              Oferujemy rozwiązania dostosowane do unikalnych potrzeb każdego
+              klienta, w tym personalizowane oferty na sprzedaż maszyn
+              budowlanych i pojazdów użytkowych.
             </p>
           </div>
           <div className={styles.advantagesItem}>
@@ -45,12 +46,12 @@ export default function AboutAdvantages() {
               width={60}
               height={60}
               src="/assets/icons/lock.svg"
-              alt="Kłódka"
+              alt="Ikona zaufania i transparentności w sprzedaży maszyn"
             />
             <h3>Zaufanie</h3>
             <p className={styles.advantagesItemParagraph}>
               Budujemy relacje oparte na uczciwości i otwartości, zapewniając
-              pełną transparentność warunków sprzedaży.
+              pełną transparentność w procesie sprzedaży.
             </p>
           </div>
         </div>

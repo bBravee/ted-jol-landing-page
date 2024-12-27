@@ -46,6 +46,5 @@ export async function getStaticPaths() {
 }
 
 export default function SaleOfferSlug(data: { offer: OfferData }) {
-  console.log(data);
-  return <SaleOfferDetails />;
+  return <SaleOfferDetails offer={data.offer} />;
 }

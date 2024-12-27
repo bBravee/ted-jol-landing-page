@@ -7,7 +7,9 @@ export default function Footer() {
     <footer className={styles.footerContainer}>
       <div className={styles.footerContent}>
         <div className={styles.footerCol}>
-          <h3 className={styles.footerHeader}>LOGO</h3>
+          <h3 id="footer-logo" className={styles.footerHeader}>
+            LOGO
+          </h3>
           <hr className={styles.underlineBlack} />
           <p className={styles.footerParagraph}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -16,59 +18,88 @@ export default function Footer() {
           </p>
         </div>
         <div className={styles.footerCol}>
-          <h3 className={styles.footerHeader}>Masz pytania?</h3>
+          <h3 id="footer-contact" className={styles.footerHeader}>
+            Masz pytania?
+          </h3>
           <hr className={styles.underlineBlack} />
-          <p
-            className={`${styles.singleContactData} ${styles.footerParagraph}`}
-          >
-            {" "}
-            <Image
-              width={20}
-              height={20}
-              src="/assets/icons/location.svg"
-              alt="Ikona lokalizacji"
-            />{" "}
-            Leśna 48, 26-200 Końskie
-          </p>
-          <p
-            className={`${styles.singleContactData} ${styles.footerParagraph}`}
-          >
-            {" "}
-            <Image
-              width={20}
-              height={20}
-              src="/assets/icons/envelope.svg"
-              alt="Ikona koperty"
-            />{" "}
-            zhu.tedjol@gmail.com
-          </p>
-          <p
-            className={`${styles.singleContactData} ${styles.footerParagraph}`}
-          >
-            {" "}
-            <Image
-              width={20}
-              height={20}
-              src="/assets/icons/telephone.svg"
-              alt="Ikona telefonu"
-            />{" "}
-            451 006 457
-          </p>
+          <address className={styles.siteMapContainer}>
+            <a
+              className={`${styles.singleContactData} ${styles.footerParagraph}`}
+            >
+              {" "}
+              <Image
+                className={styles.footerIcon}
+                width={20}
+                height={20}
+                src="/assets/icons/location.svg"
+                alt="Lokalizacja"
+              />{" "}
+              Leśna 48, 26-200 Końskie
+            </a>
+            <a
+              href="mailto:zhu.tedjol@gmail.com"
+              className={`${styles.singleContactData} ${styles.footerParagraph}`}
+              aria-label="Wyślij email do zhu.tedjol@gmail.com"
+            >
+              {" "}
+              <Image
+                className={styles.footerIcon}
+                width={20}
+                height={20}
+                src="/assets/icons/envelope.svg"
+                alt="Email"
+              />{" "}
+              zhu.tedjol@gmail.com
+            </a>
+            <a
+              href="tel:451 006 457"
+              className={`${styles.singleContactData} ${styles.footerParagraph}`}
+              aria-label="Zadzwoń pod numer 451 006 457"
+            >
+              {" "}
+              <Image
+                className={styles.footerIcon}
+                width={20}
+                height={20}
+                src="/assets/icons/telephone.svg"
+                alt="Telefon"
+              />{" "}
+              451 006 457
+            </a>
+          </address>
         </div>
         <div className={styles.footerColSmall}>
-          <h3 className={styles.footerHeader}>Odnośniki</h3>
+          <h3 id="footer-links" className={styles.footerHeader}>
+            Odnośniki
+          </h3>
           <hr className={styles.underlineBlack} />
           <div className={styles.siteMapContainer}>
-            <Link href="/" className={`${styles.footerParagraph} link`}>
+            <Link
+              href="/"
+              className={`${styles.footerParagraph} link`}
+              aria-labelledby="footer-links"
+            >
               Strona główna
             </Link>
-            <Link href="/about" className={`${styles.footerParagraph} link`}>
+            <Link
+              href="/about"
+              className={`${styles.footerParagraph} link`}
+              aria-labelledby="footer-links"
+            >
               O nas
             </Link>
-            <Link href="/offer" className={`${styles.footerParagraph} link`}>
+            <Link
+              href="/offer"
+              className={`${styles.footerParagraph} link`}
+              aria-labelledby="footer-links"
+            >
               Oferta
             </Link>
-            <Link href="/contact" className={`${styles.footerParagraph} link`}>
+            <Link
+              href="/contact"
+              className={`${styles.footerParagraph} link`}
+              aria-labelledby="footer-links"
+            >
               Kontakt
             </Link>
           </div>

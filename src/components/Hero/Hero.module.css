@@ -1,0 +1,165 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadeAnimation 18s infinite;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.image1 {
+  background-image: url("../../../public/assets/images/hero-truck.jpg");
+  animation-delay: 0s;
+}
+
+.image2 {
+  background-image: url("../../../public/assets/images/hero-exc.jpg");
+  animation-delay: 6s;
+}
+
+.image3 {
+  background-image: url("../../../public/assets/images/hero-truck.jpg");
+  animation-delay: 12s;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.heroContent h1 {
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  text-align: left;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.heroButton {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 20px;
+  padding: 1rem 4rem;
+  color: white;
+  background-color: var(--base-red);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.heroButton::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--base-red);
+  border-radius: 3px;
+  z-index: -2;
+}
+
+.heroButton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.heroButton:hover {
+  color: var(--base-red);
+}
+
+.heroButton:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroButton {
+    padding: 1rem 2rem;
+    font-size: 18px;
+  }
+
+  .heroContent {
+    width: 80%;
+  }
+}

@@ -22,6 +22,7 @@
 }
 
 .footerParagraph {
+  text-decoration: none;
   font-size: 15px;
   font-weight: 400;
 }
@@ -47,9 +48,14 @@
 }
 
 .singleContactData {
+  text-decoration: none;
+  color: white;
   display: flex;
   align-items: center;
-  gap: 1rem;
+}
+
+.footerIcon {
+  margin-right: 15px;
 }
 
 @media (max-width: 998px) {

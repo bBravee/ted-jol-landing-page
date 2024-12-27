@@ -31,7 +31,7 @@ export default function SaleOfferCard({
                 className={styles.offerImage}
                 src={offer.images[0].url}
                 fill
-                alt="productimg"
+                alt={`Zdjęcie ${offer.productName} - ${offer.category}`}
               />
             </div>
             <div className={styles.offerDetails}>
@@ -43,10 +43,12 @@ export default function SaleOfferCard({
               </p>
               <p className={styles.offerPrice}>{offer.price} zł</p>
             </div>
-
-            <button className={styles.offerItemButton}>
-              <Link href={"/offers/" + offer.slug}>Szczegóły</Link>
-            </button>
+            <Link
+              className={`${styles.offerItemLink} link`}
+              href={`/offers/${offer.slug}`}
+            >
+              <button className={styles.offerItemButton}>Szczegóły</button>
+            </Link>
           </div>
         ))}
       </div>

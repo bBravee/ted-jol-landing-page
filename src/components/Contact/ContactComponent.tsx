@@ -25,10 +25,13 @@ export default function ContactComponent() {
 
   return (
     <>
-      <div className={`${styles.contactSection} section-padding`}>
+      <section
+        className={`${styles.contactSection} section-padding`}
+        aria-labelledby="contact-title"
+      >
         <Title title={contactTitle} subtitle={subtitle} descVisible={false} />
         <div className={styles.contactWrapper}>
-          <div className={styles.contactInfo}>
+          <address className={styles.contactInfo}>
             <h3>Dane kontaktowe</h3>
             <div className={styles.contactIconsWrapper}>
               <p className={styles.singleContactData}>
@@ -37,7 +40,7 @@ export default function ContactComponent() {
                   width={30}
                   height={30}
                   src="/assets/icons/location.svg"
-                  alt="Ikona lokalizacji"
+                  alt="Lokalizacja"
                 />{" "}
                 Leśna 48, 26-200 Końskie
               </p>
@@ -47,9 +50,11 @@ export default function ContactComponent() {
                   width={30}
                   height={30}
                   src="/assets/icons/envelope.svg"
-                  alt="Ikona koperty"
+                  alt="Email"
                 />{" "}
-                zhu.tedjol@gmail.com
+                <a className="link" href="mailto:zhu.tedjol@gmail.com">
+                  zhu.tedjol@gmail.com
+                </a>
               </p>
               <p className={styles.singleContactData}>
                 {" "}
@@ -57,16 +62,22 @@ export default function ContactComponent() {
                   width={30}
                   height={30}
                   src="/assets/icons/telephone.svg"
-                  alt="Ikona telefonu"
+                  alt="Telefon"
                 />{" "}
-                451 006 457
+                <a className="link" href="tel:+4851106457">
+                  451 006 457
+                </a>
               </p>
             </div>
-          </div>
+          </address>
           <div className={styles.contactFormWrapper}>
             <h3 className={styles.formTitle}>Zostaw nam wiadomość</h3>
             <hr className={styles.underlineRed} />
-            <form onSubmit={handleSubmit} className={styles.contactForm}>
+            <form
+              onSubmit={handleSubmit}
+              className={styles.contactForm}
+              aria-labelledby="form-title"
+            >
               <input
                 className={styles.formInput}
                 type="text"
@@ -102,14 +113,18 @@ export default function ContactComponent() {
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
               <div className={styles.submitButtonWrapper}>
-                <button className={styles.submitButton} type="submit">
+                <button
+                  className={styles.submitButton}
+                  type="submit"
+                  aria-label="Wyślij formularz kontaktowy"
+                >
                   Wyślij
                 </button>
               </div>
             </form>
           </div>
         </div>
-      </div>
+      </section>
       <iframe
         className={styles.iframeMap}
         src="https://www.google.com/maps?q=Leśna+48,+26-200+Końskie&output=embed"

@@ -1,6 +1,12 @@
+.productCardWrapper {
+  width: 100%;
+  object-fit: cover;
+}
+
 .truckCard {
-  max-width: 900px;
+  max-width: 1100px;
   padding-top: 5rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,14 +58,16 @@
 
 .offerBasicInfo {
   font-size: 22px;
+  color: #444444;
 }
 
 .offerPrice {
   font-size: 36px;
+  font-weight: 500;
 }
 
 .highlight {
-  font-weight: bold;
+  font-weight: 500;
   margin-right: 10px;
 }
 
@@ -86,18 +94,80 @@
   margin-top: 10px;
 }
 
-.actionButton {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 3px;
   color: #fff;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--base-red);
+  border-radius: 3px;
+  z-index: -2;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.button:hover {
+  color: var(--base-red);
+}
+
+.button:hover::before {
+  width: 100%;
 }
 
 .mainImage:hover,
 .thumbnail:hover {
   filter: brightness(70%);
+}
+
+.iframeMap {
+  width: 100%;
+  margin-top: 0.5rem;
+  border: none;
+}
+
+.separator {
+  border: none;
+  height: 2px;
+  background-color: var(--base-red);
+}
+
+.redDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 8px;
+  vertical-align: middle;
 }
 
 @media (max-width: 930px) {
@@ -122,9 +192,5 @@
 
   .mainImgWrapper {
     height: 450px;
-  }
-
-  .thumbnails {
-    display: none;
   }
 }

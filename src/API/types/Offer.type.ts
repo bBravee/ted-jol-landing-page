@@ -8,6 +8,9 @@ export type OfferData = {
   price: number;
   details: string[];
   images: { url: string }[];
+  description: {
+    html: string;
+  };
 };
 
 type ProductImg = {

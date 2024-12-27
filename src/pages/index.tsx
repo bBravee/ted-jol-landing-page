@@ -7,6 +7,7 @@ import ContactComponent from "@/components/Contact/ContactComponent";
 import AboutComponent from "../components/About/AboutComponent";
 import { allOffers } from "@/API/graphql/allOffers";
 import SaleOfferCard from "@/components/SaleOfferCard/SaleOfferCard";
+import Hero from "@/components/Hero/Hero";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function Home(data: { offers: OfferData[] }) {
   console.log(data);
   return (
     <>
-      <TitlePanel titleText="Home" />
+      <Hero />
       <AboutComponent />
       <Offer />
       <SaleOfferCard offersData={data} fullOffer={false} />
