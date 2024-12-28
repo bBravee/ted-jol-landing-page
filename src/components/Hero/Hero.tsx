@@ -5,15 +5,6 @@ import styles from "./Hero.module.css";
 export default function Hero() {
   return (
     <>
-      <div className={styles.test}>
-        <Image
-          className={styles.testImage}
-          width={500}
-          height={500}
-          src="/assets/images/test.webp"
-          alt="test"
-        />
-      </div>
       <section className={styles.hero}>
         <div
           className={`${styles.image} ${styles.image1}`}
