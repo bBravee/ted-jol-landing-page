@@ -13,7 +13,7 @@ export default function SaleOfferCard({
 }) {
   const offersArray = fullOffer
     ? offersData.offers
-    : offersData.offers.slice(0, 2);
+    : offersData.offers.slice(0, 3);
 
   return (
     <div className="section-padding">
